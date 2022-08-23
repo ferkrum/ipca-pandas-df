@@ -9,4 +9,5 @@ dataframe = pd.DataFrame(listaDados)
 datainicial = str(dataframe.head(1).iat[0, 0])
 datafinal = str(dataframe.tail(1).iat[0 , 0])
 nomeArquivo = 'ipca(' + datainicial + '_a_' + datafinal + ').csv'
-dataframe.to_csv('ipca.csv')
+nomeArquivo = nomeArquivo.replace('/', '_')
+dataframe.to_csv(nomeArquivo)
